@@ -1,0 +1,25 @@
+{
+    "name": "term-order-per-post",
+    "version": "1.0.0",
+    "description": "Order taxonomy terms individually per post, directly from the Gutenberg editor sidebar.",
+    "private": true,
+    "scripts": {
+        "build": "wp-scripts build assets/src/index.js --output-path=assets/build",
+        "start": "wp-scripts start assets/src/index.js --output-path=assets/build",
+        "lint:js": "wp-scripts lint-js assets/src",
+        "make-pot": "wp i18n make-pot . languages/term-order-per-post.pot --domain=term-order-per-post --exclude=vendor,node_modules,assets/build",
+        "make-mo": "rm -f languages/*.mo languages/*.php && wp i18n make-mo languages/",
+        "make-json": "wp i18n make-json languages/ --no-purge",
+        "update-po": "wp i18n update-po languages/term-order-per-post.pot languages/",
+        "i18n": "npm run make-pot && npm run update-po && npm run make-mo && npm run make-json"
+    },
+    "dependencies": {
+        "@dnd-kit/core": "^6.3.1",
+        "@dnd-kit/sortable": "^10.0.0",
+        "@dnd-kit/utilities": "^3.2.2"
+    },
+    "devDependencies": {
+        "@wordpress/element": "*",
+        "@wordpress/scripts": "^32.0.0"
+    }
+}

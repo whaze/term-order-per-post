@@ -1,0 +1,7 @@
+vendor/
+node_modules/
+assets/build/
+languages/*.mo
+languages/*.php
+languages/*-*.json
+*.DS_Store
