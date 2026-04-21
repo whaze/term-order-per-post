@@ -29,7 +29,7 @@ add_action( 'init', function () {
 Retrieve ordered terms:
 
 ```php
-$terms = get_post_terms_ordered( get_the_ID(), 'category' );
+$terms = term_order_per_post_get_terms( get_the_ID(), 'category' );
 ```
 
 ## REST API

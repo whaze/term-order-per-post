@@ -25,7 +25,7 @@ Register a post type / taxonomy combination:
 
 Retrieve ordered terms in templates or REST:
 
-`$terms = get_post_terms_ordered( get_the_ID(), 'category' );`
+`$terms = term_order_per_post_get_terms( get_the_ID(), 'category' );`
 
 **Features:**
 
@@ -60,3 +60,8 @@ Yes. The order is stored as post meta and is therefore scoped to each site in th
 
 = 1.0.0 =
 * Initial release.
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial release.

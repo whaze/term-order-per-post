@@ -20,11 +20,6 @@ msgstr ""
 msgid "Term Order Per Post"
 msgstr "Ordre des termes par article"
 
-#. Plugin URI of the plugin
-#: term-order-per-post.php
-msgid "https://github.com/whaze/term-order-per-post"
-msgstr ""
-
 #. Description of the plugin
 #: term-order-per-post.php
 msgid "Order taxonomy terms individually per post, directly from the Gutenberg editor sidebar."
@@ -35,6 +30,7 @@ msgstr "Ordonnez les termes de taxonomie individuellement par article, directeme
 msgid "Jérôme Buquet"
 msgstr ""
 
+#. Plugin URI of the plugin
 #. Author URI of the plugin
 #: term-order-per-post.php
 msgid "https://profiles.wordpress.org/whaze/"

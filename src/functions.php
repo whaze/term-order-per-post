@@ -85,7 +85,7 @@ function term_order_per_post_register( string $post_type, string $taxonomy ): vo
  *
  * @return \WP_Term[]|\WP_Error Array of term objects, or WP_Error on failure.
  */
-function get_post_terms_ordered( int $post_id, string $taxonomy, array $args = [] ): array|\WP_Error { // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound -- intentional WP core-style helper API name
+function term_order_per_post_get_terms( int $post_id, string $taxonomy, array $args = [] ): array|\WP_Error {
 	if ( ! isset( $GLOBALS['term_order_per_post_storage'] ) ) {
 		return wp_get_object_terms( $post_id, $taxonomy, $args );
 	}

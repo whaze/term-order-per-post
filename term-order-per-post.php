@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Term Order Per Post
- * Plugin URI:        https://github.com/whaze/term-order-per-post
+ * Plugin URI:        https://profiles.wordpress.org/whaze/
  * Description:       Order taxonomy terms individually per post, directly from the Gutenberg editor sidebar.
  * Version:           1.0.0
  * Requires at least: 6.0
