@@ -68,7 +68,6 @@ final class EditorAssets {
 			[
 				'registrations' => $this->registry->getRegistrationsForPostType( $post_type ),
 				'metaKey'       => OrderStorage::META_KEY,
-				'nonce'         => wp_create_nonce( 'wp_rest' ),
 			]
 		);
 

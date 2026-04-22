@@ -50,7 +50,7 @@ Yes. Pass any registered post type and taxonomy slug to `term_order_per_post_reg
 
 = What happens if no order is defined for a post? =
 
-`get_post_terms_ordered()` falls back to the standard `wp_get_object_terms()` result — the plugin is completely transparent.
+`term_order_per_post_get_terms()` falls back to the standard `wp_get_object_terms()` result — the plugin is completely transparent.
 
 = Is this multisite compatible? =
 
