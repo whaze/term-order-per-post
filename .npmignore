@@ -1,0 +1,12 @@
+# Dev tooling configs
+.editorconfig
+eslint.config.js
+phpcs.xml
+composer.lock
+package-lock.json
+
+# Empty root-level build artifact directory
+build/
+
+# Previously generated zip files
+*.zip
