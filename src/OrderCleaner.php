@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace Whaze\TermOrderPerPost;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Keeps stored term order in sync when terms are removed from a post.
  */

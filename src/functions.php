@@ -7,6 +7,10 @@
 
 declare(strict_types=1);
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 use Whaze\TermOrderPerPost\BlockEditor\EditorAssets;
 use Whaze\TermOrderPerPost\OrderCleaner;
 use Whaze\TermOrderPerPost\OrderStorage;
@@ -38,17 +42,6 @@ add_action(
 		// Store the registry globally so public functions can access it.
 		$GLOBALS['term_order_per_post_registry'] = $registry;
 		$GLOBALS['term_order_per_post_storage']  = $storage;
-
-		add_action(
-			'init',
-			static function (): void {
-				load_plugin_textdomain(
-					'term-order-per-post',
-					false,
-					plugin_basename( TERM_ORDER_PER_POST_DIR ) . '/languages'
-				);
-			}
-		);
 	}
 );
 

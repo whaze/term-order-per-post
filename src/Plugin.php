@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace Whaze\TermOrderPerPost;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 use Whaze\TermOrderPerPost\BlockEditor\EditorAssets;
 
 /**

@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace Whaze\TermOrderPerPost\BlockEditor;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 use Whaze\TermOrderPerPost\OrderStorage;
 use Whaze\TermOrderPerPost\Registry;
 

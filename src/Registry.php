@@ -9,6 +9,10 @@ declare(strict_types=1);
 
 namespace Whaze\TermOrderPerPost;
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * Stores the list of post type / taxonomy pairs registered for custom term ordering.
  */
