@@ -32,16 +32,16 @@ add_action(
 			new RestField( $registry, $storage ),
 			new EditorAssets(
 				$registry,
-				TERM_ORDER_PER_POST_DIR,
-				TERM_ORDER_PER_POST_URL
+				WHAZE_TERM_ORDER_FOR_POSTS_DIR,
+				WHAZE_TERM_ORDER_FOR_POSTS_URL
 			),
 		);
 
 		$plugin->register();
 
 		// Store the registry globally so public functions can access it.
-		$GLOBALS['term_order_per_post_registry'] = $registry;
-		$GLOBALS['term_order_per_post_storage']  = $storage;
+		$GLOBALS['whaze_term_order_for_posts_registry'] = $registry;
+		$GLOBALS['whaze_term_order_for_posts_storage']  = $storage;
 	}
 );
 
@@ -53,18 +53,18 @@ add_action(
  * @param string $post_type The post type slug.
  * @param string $taxonomy  The taxonomy slug.
  */
-function term_order_per_post_register( string $post_type, string $taxonomy ): void {
-	if ( ! isset( $GLOBALS['term_order_per_post_registry'] ) ) {
+function whaze_term_order_for_posts_register( string $post_type, string $taxonomy ): void {
+	if ( ! isset( $GLOBALS['whaze_term_order_for_posts_registry'] ) ) {
 		_doing_it_wrong(
 			__FUNCTION__,
-			esc_html__( 'term_order_per_post_register() must be called after the plugins_loaded hook.', 'term-order-per-post' ),
+			esc_html__( 'whaze_term_order_for_posts_register() must be called after the plugins_loaded hook.', 'whaze-term-order-for-posts' ),
 			'1.0.0'
 		);
 
 		return;
 	}
 
-	$GLOBALS['term_order_per_post_registry']->register( $post_type, $taxonomy );
+	$GLOBALS['whaze_term_order_for_posts_registry']->register( $post_type, $taxonomy );
 }
 
 /**
@@ -78,13 +78,13 @@ function term_order_per_post_register( string $post_type, string $taxonomy ): vo
  *
  * @return \WP_Term[]|\WP_Error Array of term objects, or WP_Error on failure.
  */
-function term_order_per_post_get_terms( int $post_id, string $taxonomy, array $args = [] ): array|\WP_Error {
-	if ( ! isset( $GLOBALS['term_order_per_post_storage'] ) ) {
+function whaze_term_order_for_posts_get_terms( int $post_id, string $taxonomy, array $args = [] ): array|\WP_Error {
+	if ( ! isset( $GLOBALS['whaze_term_order_for_posts_storage'] ) ) {
 		return wp_get_object_terms( $post_id, $taxonomy, $args );
 	}
 
 	/** @var OrderStorage $storage OrderStorage instance. */ // phpcs:ignore Generic.Commenting.DocComment.MissingShort
-	$storage = $GLOBALS['term_order_per_post_storage'];
+	$storage = $GLOBALS['whaze_term_order_for_posts_storage'];
 	$order   = $storage->getOrder( $post_id, $taxonomy );
 
 	if ( empty( $order ) ) {

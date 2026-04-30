@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Term Order Per Post 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/term-order-per-post\n"
+"Project-Id-Version: Whaze Term Order for Posts 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/whaze-term-order-for-posts\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
@@ -11,55 +11,54 @@ msgstr ""
 "PO-Revision-Date: 2026-04-20 10:51+0000\n"
 "Language: fr_FR\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Domain: term-order-per-post\n"
+"X-Domain: whaze-term-order-for-posts\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Loco-Version: 2.8.3; wp-6.9.4; php-8.3.27\n"
 
 #. Plugin Name of the plugin
-#: term-order-per-post.php
-msgid "Term Order Per Post"
-msgstr "Ordre des termes par article"
+#: whaze-term-order-for-posts.php
+msgid "Whaze Term Order for Posts"
+msgstr "Whaze : ordre des termes par article"
 
 #. Description of the plugin
-#: term-order-per-post.php
+#: whaze-term-order-for-posts.php
 msgid "Order taxonomy terms individually per post, directly from the Gutenberg editor sidebar."
 msgstr "Ordonnez les termes de taxonomie individuellement par article, directement depuis le panneau latéral de l'éditeur Gutenberg."
 
 #. Author of the plugin
-#: term-order-per-post.php
+#: whaze-term-order-for-posts.php
 msgid "Jérôme Buquet"
 msgstr ""
 
-#. Plugin URI of the plugin
 #. Author URI of the plugin
-#: term-order-per-post.php
+#: whaze-term-order-for-posts.php
 msgid "https://profiles.wordpress.org/whaze/"
 msgstr ""
 
-#: src/functions.php:67
-msgid "term_order_per_post_register() must be called after the plugins_loaded hook."
-msgstr "term_order_per_post_register() doit être appelée après le hook plugins_loaded."
+#: src/functions.php:60
+msgid "whaze_term_order_for_posts_register() must be called after the plugins_loaded hook."
+msgstr "whaze_term_order_for_posts_register() doit être appelée après le hook plugins_loaded."
 
-#: src/RestField.php:42
+#: src/RestField.php:46
 msgid "Custom term order per taxonomy."
 msgstr "Ordre personnalisé des termes par taxonomie."
 
-#: src/RestField.php:84
+#: src/RestField.php:88
 msgid "term_order must be an object mapping taxonomy slugs to arrays of term IDs."
 msgstr "term_order doit être un objet associant des slugs de taxonomie à des tableaux d'IDs de termes."
 
-#: src/RestField.php:92
+#: src/RestField.php:96
 msgid "You do not have permission to edit this post."
 msgstr "Vous n'avez pas la permission de modifier cet article."
 
 #. translators: %s: taxonomy slug
-#: src/RestField.php:111
+#: src/RestField.php:115
 #, php-format
 msgid "Term IDs for taxonomy \"%s\" must be an array."
 msgstr "Les IDs de termes pour la taxonomie « %s » doivent être un tableau."
 
 #. translators: 1: taxonomy slug, 2: comma-separated list of invalid IDs
-#: src/RestField.php:155
+#: src/RestField.php:159
 #, php-format
 msgid "The following term IDs are not assigned to this post in taxonomy \"%1$s\": %2$s"
 msgstr "Les IDs de termes suivants ne sont pas assignés à cet article dans la taxonomie « %1$s » : %2$s"
@@ -79,3 +78,8 @@ msgstr "Assignez d'abord des termes via le panneau %s pour les ordonner ici."
 #, js-format
 msgid "%s (order)"
 msgstr "%s (ordre)"
+
+#. Plugin URI of the plugin
+#: whaze-term-order-for-posts.php
+msgid "https://github.com/whaze/whaze-term-order-for-posts"
+msgstr ""

@@ -41,7 +41,7 @@ final class Plugin {
 	 * Register all plugin hooks.
 	 */
 	public function register(): void {
-		// Priority 99: must run after theme/plugin term_order_per_post_register() calls (priority 10).
+		// Priority 99: must run after theme/plugin whaze_term_order_for_posts_register() calls (priority 10).
 		add_action( 'init', [ $this, 'registerPostMeta' ], 99 );
 		add_action( 'rest_api_init', [ $this->rest_field, 'register' ] );
 		add_action( 'set_object_terms', [ $this->cleaner, 'onSetObjectTerms' ], 10, 6 );
@@ -51,7 +51,7 @@ final class Plugin {
 	/**
 	 * Register the post meta so it is accessible via the REST API and Gutenberg.
 	 *
-	 * Called on `init` (after `term_order_per_post_register()` calls have run)
+	 * Called on `init` (after `whaze_term_order_for_posts_register()` calls have run)
 	 * so we can target only the relevant post types.
 	 */
 	public function registerPostMeta(): void {

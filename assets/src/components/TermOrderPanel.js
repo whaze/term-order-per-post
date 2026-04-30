@@ -14,7 +14,7 @@ import SortableTermList from './SortableTermList';
  * @param {string} props.label    Human-readable taxonomy label.
  */
 export default function TermOrderPanel( { taxonomy, restBase, label } ) {
-	const { metaKey } = window.termOrderPerPost;
+	const { metaKey } = window.whazeTermOrderForPosts;
 
 	const { assignedTermIds, storedOrder, fullMetaOrder } = useSelect(
 		( select ) => {
@@ -56,7 +56,7 @@ export default function TermOrderPanel( { taxonomy, restBase, label } ) {
 					/* translators: %s: taxonomy name */
 					__(
 						'Assign terms first using the %s panel to order them here.',
-						'term-order-per-post'
+						'whaze-term-order-for-posts'
 					),
 					label
 				) }

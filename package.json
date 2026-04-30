@@ -1,5 +1,5 @@
 {
-    "name": "term-order-per-post",
+    "name": "whaze-term-order-for-posts",
     "version": "1.0.0",
     "description": "Order taxonomy terms individually per post, directly from the Gutenberg editor sidebar.",
     "private": true,
@@ -10,16 +10,16 @@
         "vendor",
         "composer.json",
         "readme.txt",
-        "term-order-per-post.php"
+        "whaze-term-order-for-posts.php"
     ],
     "scripts": {
         "build": "wp-scripts build assets/src/index.js --output-path=assets/build",
         "start": "wp-scripts start assets/src/index.js --output-path=assets/build",
         "lint:js": "wp-scripts lint-js assets/src",
-        "make-pot": "wp i18n make-pot . languages/term-order-per-post.pot --domain=term-order-per-post --exclude=vendor,node_modules,assets/build",
+        "make-pot": "wp i18n make-pot . languages/whaze-term-order-for-posts.pot --domain=whaze-term-order-for-posts --exclude=vendor,node_modules,assets/build",
         "make-mo": "rm -f languages/*.mo languages/*.php && wp i18n make-mo languages/",
         "make-json": "wp i18n make-json languages/ --no-purge",
-        "update-po": "wp i18n update-po languages/term-order-per-post.pot languages/",
+        "update-po": "wp i18n update-po languages/whaze-term-order-for-posts.pot languages/",
         "i18n": "npm run make-pot && npm run update-po && npm run make-mo && npm run make-json",
         "plugin-zip": "wp-scripts plugin-zip"
     },

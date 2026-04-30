@@ -59,7 +59,7 @@ final class EditorAssets {
 		$asset = require $asset_file;
 
 		wp_enqueue_script(
-			'term-order-per-post-editor',
+			'whaze-term-order-for-posts-editor',
 			$this->plugin_dir_url . 'assets/build/index.js',
 			$asset['dependencies'],
 			$asset['version'],
@@ -67,8 +67,8 @@ final class EditorAssets {
 		);
 
 		wp_localize_script(
-			'term-order-per-post-editor',
-			'termOrderPerPost',
+			'whaze-term-order-for-posts-editor',
+			'whazeTermOrderForPosts',
 			[
 				'registrations' => $this->registry->getRegistrationsForPostType( $post_type ),
 				'metaKey'       => OrderStorage::META_KEY,
@@ -87,7 +87,7 @@ final class EditorAssets {
 	 */
 	private function loadScriptTranslations(): void {
 		$locale = determine_locale();
-		$files  = glob( $this->plugin_dir_path . 'languages/term-order-per-post-' . $locale . '-*.json' );
+		$files  = glob( $this->plugin_dir_path . 'languages/whaze-term-order-for-posts-' . $locale . '-*.json' );
 
 		if ( empty( $files ) ) {
 			return;
@@ -105,8 +105,8 @@ final class EditorAssets {
 			}
 
 			wp_add_inline_script(
-				'term-order-per-post-editor',
-				'wp.i18n.setLocaleData( ' . wp_json_encode( $data['locale_data']['messages'] ) . ', "term-order-per-post" );',
+				'whaze-term-order-for-posts-editor',
+				'wp.i18n.setLocaleData( ' . wp_json_encode( $data['locale_data']['messages'] ) . ', "whaze-term-order-for-posts" );',
 				'before'
 			);
 		}

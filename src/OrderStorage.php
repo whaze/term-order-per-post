@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 final class OrderStorage {
 
-	public const META_KEY = '_term_order_per_post';
+	public const META_KEY = '_whaze_term_order_for_posts';
 
 	/**
 	 * Get the ordered term IDs for a given post and taxonomy.
@@ -111,7 +111,7 @@ final class OrderStorage {
 			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
 			trigger_error(
 				sprintf(
-					'term-order-per-post: corrupted meta for post %d — expected JSON array, got: %s',
+					'whaze-term-order-for-posts: corrupted meta for post %d — expected JSON array, got: %s',
 					absint( $post_id ),
 					esc_html( $raw )
 				),

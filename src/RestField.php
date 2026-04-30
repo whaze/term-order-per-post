@@ -43,7 +43,7 @@ final class RestField {
 					'get_callback'    => [ $this, 'get' ],
 					'update_callback' => [ $this, 'update' ],
 					'schema'          => [
-						'description'          => __( 'Custom term order per taxonomy.', 'term-order-per-post' ),
+						'description'          => __( 'Custom term order per taxonomy.', 'whaze-term-order-for-posts' ),
 						'type'                 => 'object',
 						'context'              => [ 'view', 'edit' ],
 						'additionalProperties' => [
@@ -85,7 +85,7 @@ final class RestField {
 		if ( ! is_array( $value ) ) {
 			return new \WP_Error(
 				'term_order_invalid',
-				__( 'term_order must be an object mapping taxonomy slugs to arrays of term IDs.', 'term-order-per-post' ),
+				__( 'term_order must be an object mapping taxonomy slugs to arrays of term IDs.', 'whaze-term-order-for-posts' ),
 				[ 'status' => 400 ]
 			);
 		}
@@ -93,7 +93,7 @@ final class RestField {
 		if ( ! current_user_can( 'edit_post', $post->ID ) ) {
 			return new \WP_Error(
 				'term_order_forbidden',
-				__( 'You do not have permission to edit this post.', 'term-order-per-post' ),
+				__( 'You do not have permission to edit this post.', 'whaze-term-order-for-posts' ),
 				[ 'status' => 403 ]
 			);
 		}
@@ -112,7 +112,7 @@ final class RestField {
 					'term_order_invalid_ids',
 					sprintf(
 						/* translators: %s: taxonomy slug */
-						__( 'Term IDs for taxonomy "%s" must be an array.', 'term-order-per-post' ),
+						__( 'Term IDs for taxonomy "%s" must be an array.', 'whaze-term-order-for-posts' ),
 						esc_html( $taxonomy )
 					),
 					[ 'status' => 400 ]
@@ -156,7 +156,7 @@ final class RestField {
 				'term_order_invalid_ids',
 				sprintf(
 					/* translators: 1: taxonomy slug, 2: comma-separated list of invalid IDs */
-					__( 'The following term IDs are not assigned to this post in taxonomy "%1$s": %2$s', 'term-order-per-post' ),
+					__( 'The following term IDs are not assigned to this post in taxonomy "%1$s": %2$s', 'whaze-term-order-for-posts' ),
 					esc_html( $taxonomy ),
 					implode( ', ', array_map( 'absint', $invalid ) )
 				),

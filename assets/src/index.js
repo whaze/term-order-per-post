@@ -3,16 +3,16 @@ import { registerPlugin } from '@wordpress/plugins';
 import { PluginDocumentSettingPanel } from '@wordpress/editor';
 import TermOrderPanel from './components/TermOrderPanel';
 
-const { registrations } = window.termOrderPerPost;
+const { registrations } = window.whazeTermOrderForPosts;
 
 registrations.forEach( ( { taxonomy, label, restBase } ) => {
-	registerPlugin( `term-order-per-post-${ taxonomy }`, {
+	registerPlugin( `whaze-term-order-for-posts-${ taxonomy }`, {
 		render: () => (
 			<PluginDocumentSettingPanel
-				name={ `term-order-per-post-${ taxonomy }` }
+				name={ `whaze-term-order-for-posts-${ taxonomy }` }
 				title={ sprintf(
 					/* translators: %s: taxonomy label, e.g. "Genres" */
-					__( '%s (order)', 'term-order-per-post' ),
+					__( '%s (order)', 'whaze-term-order-for-posts' ),
 					label
 				) }
 			>

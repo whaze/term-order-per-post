@@ -1,4 +1,4 @@
-=== Term Order Per Post ===
+=== Whaze Term Order for Posts ===
 Contributors: whaze
 Tags: taxonomy, terms, order, gutenberg, block editor
 Requires at least: 6.0
@@ -19,13 +19,13 @@ Term Order Per Post lets developers enable per-post custom ordering of taxonomy 
 Register a post type / taxonomy combination:
 
 `add_action( 'init', function () {
-    term_order_per_post_register( 'post', 'category' );
-    term_order_per_post_register( 'movie', 'genre' );
+    whaze_term_order_for_posts_register( 'post', 'category' );
+    whaze_term_order_for_posts_register( 'movie', 'genre' );
 } );`
 
 Retrieve ordered terms in templates or REST:
 
-`$terms = term_order_per_post_get_terms( get_the_ID(), 'category' );`
+`$terms = whaze_term_order_for_posts_get_terms( get_the_ID(), 'category' );`
 
 **Features:**
 
@@ -40,17 +40,17 @@ Retrieve ordered terms in templates or REST:
 
 1. Upload the plugin folder to `/wp-content/plugins/`.
 2. Activate the plugin through the **Plugins** screen in WordPress.
-3. Call `term_order_per_post_register()` in your theme or plugin.
+3. Call `whaze_term_order_for_posts_register()` in your theme or plugin.
 
 == Frequently Asked Questions ==
 
 = Does this work with custom post types and taxonomies? =
 
-Yes. Pass any registered post type and taxonomy slug to `term_order_per_post_register()`.
+Yes. Pass any registered post type and taxonomy slug to `whaze_term_order_for_posts_register()`.
 
 = What happens if no order is defined for a post? =
 
-`term_order_per_post_get_terms()` falls back to the standard `wp_get_object_terms()` result — the plugin is completely transparent.
+`whaze_term_order_for_posts_get_terms()` falls back to the standard `wp_get_object_terms()` result — the plugin is completely transparent.
 
 = Is this multisite compatible? =
 
