@@ -1,4 +1,4 @@
-# Term Order Per Post
+# Whaze Term Order for Posts
 
 A WordPress plugin that lets developers enable per-post custom ordering of taxonomy terms, directly from the Gutenberg editor sidebar.
 
@@ -21,15 +21,15 @@ Register a post type / taxonomy combination (on `init` or later):
 
 ```php
 add_action( 'init', function () {
-    term_order_per_post_register( 'post', 'category' );
-    term_order_per_post_register( 'movie', 'genre' );
+    whaze_term_order_for_posts_register( 'post', 'category' );
+    whaze_term_order_for_posts_register( 'movie', 'genre' );
 } );
 ```
 
 Retrieve ordered terms:
 
 ```php
-$terms = term_order_per_post_get_terms( get_the_ID(), 'category' );
+$terms = whaze_term_order_for_posts_get_terms( get_the_ID(), 'category' );
 ```
 
 ## REST API

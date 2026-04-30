@@ -12,7 +12,7 @@ Order taxonomy terms individually per post, directly from the Gutenberg editor s
 
 == Description ==
 
-Term Order Per Post lets developers enable per-post custom ordering of taxonomy terms directly from the Gutenberg editor sidebar. The plugin is entirely code-driven: no settings page, no configuration UI.
+Whaze Term Order for Posts lets developers enable per-post custom ordering of taxonomy terms directly from the Gutenberg editor sidebar. The plugin is entirely code-driven: no settings page, no configuration UI.
 
 **For developers:**
 
